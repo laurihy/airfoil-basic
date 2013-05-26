@@ -1,0 +1,30 @@
+scripts: 
+- /libraries/backlift-analytics.js
+
+styles:
+- /libraries/bootstrap/bootstrap.css
+- /libraries/bootstrap/responsive.css
+- /styles/main.css
+
+optimize: no
+
+redirect_to_https: yes
+
+analytics: yes
+variants:
+    - default: 0.5
+    - control: 0.5
+
+collections:
+    signups:
+        variant: { _public_permissions: '' }
+        email: { _public_permissions: ''}
+
+packages:
+    backlift:
+        admin: github.com/laurihy/airfoil-admin
+        scripts: gist.github.com/laurihy/607c606d903e30304a17
+
+require:
+    - backlift
+          
